@@ -2,6 +2,16 @@
   (:require [clojure.test :refer :all]
             [web-lib.core :refer :all]))
 
+(deftest starts-with?-tests
+  (testing "strings containing the substring"
+    (is (true? (starts-with? "asdf" "asdf")))
+    (is (true? (starts-with? "asdf" "as")))
+    (is (true? (starts-with? "ad" "")))
+    (is (true? (starts-with? "asdf" "a"))))
+  (testing "non containing strings"
+    (is (false? (starts-with? "foo" "bar")))
+    (is (false? (starts-with? "" "a")))))
+
 (deftest prepend-context-tests
   (testing "default context /"
     (let [req {:context "/"}]

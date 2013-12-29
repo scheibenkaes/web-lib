@@ -1,4 +1,4 @@
-(defproject org.scheibenkaes/web-lib "0.1.0"
+(defproject org.scheibenkaes/web-lib "0.2.0"
   :description "Library for common web (ring) functionality"
   :url "https://github.com/scheibenkaes/web-lib"
   :license {:name "Eclipse Public License"
